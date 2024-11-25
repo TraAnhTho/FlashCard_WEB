@@ -4,12 +4,12 @@
     /* căn giữa */
     margin: 0 auto;
 }
-
 * {
     /* khi padding,... không bị thay đổi kích thước */
     box-sizing: inherit;
     font-size: medium;
     outline: none;
+    color: black;
 }
 html {
     /* 1rem=10px */
@@ -25,18 +25,24 @@ html {
 body {
     overflow-x: hidden;
 }
-.title-font {
-    font-family: "Roboto", sans-serif;
-    font-weight: 40rem;
-    font-style: normal;
-    line-height: normal;
-    font-size: 5rem;
-    color: $color_other;
-    margin: auto;
-}
+// .title-font {
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 40rem;
+//     font-style: normal;
+//     line-height: normal;
+//     font-size: 5rem;
+//     // color: $color_other;
+//     margin: auto;
+// }
 li {
     list-style-type: none;
 }
 a {
     text-decoration: none;
+}
+button {
+    cursor: pointer;
+    background-color: blue;
+    padding: 1rem;
+    border-radius: 1rem;
 }
