@@ -1,15 +1,10 @@
 @charset "UTF-8";
 .logo-item {
-  height: 15rem;
-  width: 15rem;
+  height: 5rem;
+  width: 10rem;
 }
 
 /* Giao diện cho dropdown */
-.logo-item {
-  height: 15rem;
-  width: 15rem;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
