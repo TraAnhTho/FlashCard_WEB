@@ -1,3 +1,5 @@
+$main-color: #4255ff;
+$white-color: #ffff;
 @mixin gird {
     /* nếu kichthuoc be hơn 1200px tự điều chỉnh */
     max-width: 95%;
@@ -17,7 +19,7 @@ html {
     /* độ cao khoảng cách các dòng chữ */
     line-height: normal;
     /* font chữ  */
-    font-family: "Pacifico", serif;
+    font-family: "Roboto", sans-serif;
     /* khi padding,... không bị thay đổi kích thước */
     box-sizing: border-box;
     overflow-x: hidden;
@@ -42,7 +44,21 @@ a {
 }
 button {
     cursor: pointer;
-    background-color: blue;
+    background-color: $main-color;
+    color: $white-color;
     padding: 1rem;
     border-radius: 1rem;
+    height: 4.5rem;
+    border: 0;
+    margin: 0 auto;
+    padding: 0.5rem 3rem;
+    align-items: center;
+}
+.icon-main {
+    color: $main-color;
+    padding: 0;
+}
+.icon-white {
+    color: $white-color;
+    padding: 0;
 }

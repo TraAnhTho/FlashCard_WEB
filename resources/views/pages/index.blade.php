@@ -29,56 +29,22 @@
     <div>
         <!-- HEADER -->
          <header class="header">
-            <div class="container-fluid">
+            <div class="nav-container container-fluid flex-row">
+                <div class="logo-item">
+                    <img class="logo-item" src="{{ asset('imgs/logoflashcard_blue.png') }}" alt="">
+                </div>
                 <ul class="nav flex-row">
-                    <li class="nav-item logo-item">
-                        <img class="logo-item" src="{{ asset('imgs/logoflashcard_blue.png') }}" alt="">
-                    </li>
-                    <li class="nav-item">
-                        <!-- <div class="dropdown">
-                            <button class="dropdown-btn">Chủ đề</button>
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <span>Bài thi</span>
-                                    <div class="submenu">
-                                        <a href="#">IELTS</a>
-                                        <a href="#">TOEFL</a>
-                                        <a href="#">TOEIC</a>
-                                        <a href="#">Xem tất cả</a>
-                                    </div>
-                                </div>
-                            <div class="dropdown-item">
-                                <span>Nghệ thuật và nhân văn</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Ngôn ngữ</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Toán học</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khoa học</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khoa học xã hội</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khác</span>
-                            </div>
-                            </div>
-                        </div> -->
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Công cụ học</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Chủ đề</a>
                     </li>
-                    <li class="nav-item" style="width: 40%;">
-                        <input type="text"  placeholder="Tìm kiếm" />
+                    <li class="nav-item search-item" style="width: 40%;">
+                        <input class="" type="text"  placeholder="🔎︎ 🔍Tìm kiếm câu hỏi" />
                     </li>
-                    <li class="nav-item">
-                        <button class="">Đăng Kí</button>
+                    <li class="nav-item" >
+                        <button class="" style="border: 0; background-color: white; color: #4255ff;"> <i class="icon-main fa-solid fa-plus"></i> Tạo</button>
                     </li>
                     <li class="nav-item">
                         <button>Đăng Kí</button>
@@ -89,7 +55,8 @@
                 <h1>Bạn muốn học như thế nào? </h1>
                 <p>Nắm vững kiến thức đang học với thẻ ghi nhớ tương tác, bài kiểm tra thử và hoạt động học tập của Quizlet.</p>
                 <button>Đăng Kí Miễn Phí</button>
-                <p>Đã có tài khoản <a href="">Đăng nhập</a></p>
+                <br>
+                <span>Đã có tài khoản <a href="">Đăng nhập</a></span>
             </div>
          </header>
 
@@ -108,34 +75,34 @@
 
                 <!-- The slideshow/carousel -->
                 <div class="caro-inner flex-row">
-                <div class="caro-item active">
-                    <div class="card-item flex-column">
+                <div class="caro-item" style="background-color: #98E3FF;"> <!-- active -->
+                    <div class="card-item flex-column" >
                         <h3>Học</h3>
-                        <img src="{{ asset('imgs/partone-0.avif') }}" alt="Los Angeles" class="d-block img-card" style="width:100%">
+                        <img src="{{ asset('imgs/partone-0.jpg') }}" alt="Ảnh không tải được" class="d-block img-card" style="width:100%">
                     </div>
                 </div>
-                <div class="caro-item">
+                <div class="caro-item" style="background-color: #423ED8;">
                 <div class="card-item flex-column">
                         <h3>Thẻ Ghi Nhớ</h3>
-                        <img src="{{ asset('imgs/partone-1.avif') }}" alt="Los Angeles" class="d-block img-card" style="width:100%">
+                        <img src="{{ asset('imgs/partone-1.png') }}" alt="Ảnh không tải được" class="d-block img-card" style="width:100%">
                     </div>
                 </div>
-                <div class="caro-item">
+                <div class="caro-item" style="background-color: #FFCD1F;">
                 <div class="card-item flex-column">
                         <h3>Kiểm Tra</h3>
-                        <img src="{{ asset('imgs/partone-2.avif') }}" alt="Los Angeles" class="d-block img-card" style="width:100%">
+                        <img src="{{ asset('imgs/partone-2.avif') }}" alt="Ảnh không tải được" class="d-block img-card" style="width:100%">
                     </div>
                 </div>
-                <div class="caro-item active">
+                <div class="caro-item" style="background-color: #FDD2CA;">
                     <div class="card-item flex-column">
                         <h3>Ghép Thẻ</h3>
-                        <img src="{{ asset('imgs/partone-3.avif') }}" alt="Los Angeles" class="d-block img-card" style="width:100%">
+                        <img src="{{ asset('imgs/partone-3.avif') }}" alt="Ảnh không tải được" class="d-block img-card" style="width:100%">
                     </div>
                 </div>
-                <div class="caro-item active">
+                <div class="caro-item" style="background-color: #98F1D1;">
                     <div class="card-item flex-column">
                         <h3>Lời Giải Chuyên Gia</h3>
-                        <img src="{{ asset('imgs/partone-4.avif') }}" alt="Los Angeles" class="d-block img-card" style="width:100%">
+                        <img src="{{ asset('imgs/partone-4.avif') }}" alt="Ảnh không tải được" class="d-block img-card" style="width:100%">
                     </div>
                 </div>
                 </div>
@@ -151,10 +118,13 @@
                 </div> -->
             <!-- ---------- -->
             </div>
-            <!-- ---------PART TWO---------- -->
+
+            <!-- -------------------- -->
+             <div class="container-fluid container-part234 " >
+              <!-- ---------PART TWO---------- -->
              <div class="container content-part--two flex-row">
               <div class="img-part">
-                <img class="" src="{[{ asset('imgs/parttwo.avif') }]}" alt="">
+                <img class="d-block" src="{{ asset('imgs/parttwo.avif') }}" alt="Ảnh không tải được">
               </div>
               <div class="text-part">
                 <h3>Mọi lớp học, mọi bài thi, một ứng dụng học tập tối ưu. </h3>
@@ -162,36 +132,43 @@
               </div>
              </div>
              <!-- ---------PART THREE---------- -->
-             <div class="container content-part--three flex-row-reverse">
-              <div class="img-part">
-                <img class="" src="{[{ asset('imgs/partthree.avif') }]}" alt="">
-              </div>
-              <div class="text-part">
+             <div class="container content-part--three flex-row">
+             <div class="text-part">
                 <h3>Chọn cách học mà bạn muốn. </h3>
                 <p>Biến thẻ ghi nhớ thành câu hỏi trắc nghiệm và nhiều nội dung khác với chế độ Học. Củng cố kiến thức của bạn bằng các trò chơi học tập như Ghép thẻ.</p>
+              </div>
+              <div class="img-part">
+                <img class="d-block" src="{{ asset('imgs/partthree.avif') }}" alt="Ảnh không tải được">
               </div>
              </div>
              <!-- ---------PART FOUR---------- -->
              <div class="container content-part--four flex-row">
               <div class="img-part">
-                <img class="" src="{[{ asset('imgs/partfour.avif') }]}" alt="">
+                <img class="d-block" src="{{ asset('imgs/partfour.avif') }}" alt="Ảnh không tải được">
               </div>
               <div class="text-part">
                 <h3>Chuẩn bị ôn thi cho bất kỳ môn học nào. </h3>
                 <p>Ghi nhớ mọi thứ với các bài kiểm tra thử và phiên học được cá nhân hóa. 98% học sinh cho biết Flashcard đã giúp họ hiểu bài hơn.</p>
               </div>
              </div>
-             <!-- ---------PART FIVE---------- -->
-             <div class="container content-part--five flex-row-reverse">
-              <div class="img-part">
-                <img class="" src="{[{ asset('imgs/partfive.avif') }]}" alt="">
-              </div>
-              <div class="text-part">
+             <!-- -------------- -->
+             </div>
+            
+             <!-- ------------- -->
+              <div class="container-part5">
+                <!-- ---------PART FIVE---------- -->
+             <div class="container content-part--five flex-row">
+             <div class="text-part">
                 <h3>Truyền năng lượng cho học sinh. </h3>
                 <p>Giúp mọi học viên tự tin học bất cứ điều gì. Với các học phần miễn phí, chế độ học và trò chơi trong lớp như Flashcard Live, bạn có thể ngay lập tức tạo ra một lớp học gắn kết hơn.</p>
               </div>
+              <div class="img-part">
+                <img class="d-block" src="{{ asset('imgs/partfive.avif') }}" alt="Ảnh không tải được">
+              </div>
              </div>
-
+             <!-- -------------------------- -->
+              </div>
+             
 
              <!-- -------------end main--------------- -->
            </div>
