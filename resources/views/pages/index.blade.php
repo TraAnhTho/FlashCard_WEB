@@ -29,6 +29,33 @@
     <div>
         <!-- HEADER -->
          <header class="header">
+         <div class="">
+              <!-- Dây đỏ và hình ảnh 1 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-1.gif);"></div>
+              </div>
+              <!-- Dây đỏ và hình ảnh 2 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-2.gif);"></div>
+              </div>
+              <!-- Dây đỏ và hình ảnh 3 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-3.gif);"></div>
+              </div>
+              <!-- Dây đỏ và hình ảnh 4 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-4.gif);"></div>
+              </div>
+              <!-- Dây đỏ và hình ảnh 5 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-5.gif);"></div>
+              </div>
+              <!-- Dây đỏ và hình ảnh 6 -->
+              <div class="circle-wire">
+                  <div class="circle-image" style="background-image: url(../imgs/circle-image-6.gif);"></div>
+              </div>
+          </div>
+          <!-- ------------------ -->
             <div class="nav-container container-fluid flex-row">
                 <div class="logo-item">
                     <img class="logo-item" src="{{ asset('imgs/logoflashcard_blue.png') }}" alt="">
@@ -41,24 +68,46 @@
                         <a class="nav-link disabled" href="#">Chủ đề</a>
                     </li>
                     <li class="nav-item search-item" style="width: 40%;">
-                        <input class="" type="text"  placeholder="🔎︎ 🔍Tìm kiếm câu hỏi" />
+                        <input class="" type="text"  placeholder="🔎︎ Tìm kiếm câu hỏi" />
                     </li>
                     <li class="nav-item" >
                         <button class="" style="border: 0; background-color: white; color: #4255ff;"> <i class="icon-main fa-solid fa-plus"></i> Tạo</button>
                     </li>
                     <li class="nav-item">
-                        <button>Đăng Kí</button>
+                        <button onclick="window.location.href='{{  url('/login')}}'">Đăng Nhập</button>
                     </li>
                 </ul>
             </div>
             <div class="title-contain container">
                 <h1>Bạn muốn học như thế nào? </h1>
                 <p>Nắm vững kiến thức đang học với thẻ ghi nhớ tương tác, bài kiểm tra thử và hoạt động học tập của Quizlet.</p>
-                <button>Đăng Kí Miễn Phí</button>
+                <button class="" onclick="window.location.href='{{  url('/register')}}'">Đăng Kí Miễn Phí</button>
                 <br>
-                <span>Đã có tài khoản <a href="">Đăng nhập</a></span>
+                <span>Đã có tài khoản <a href="{{ url('/login') }}">Đăng nhập</a></span>
             </div>
          </header>
+
+         <!-- -------------UNDER HEADER--------------- -->
+      <div class="under-header">
+        <div class="gird">
+          <div class="under-header--border">
+            <p>
+              Có hơn 60% dân số trên thế giới có nhu cầu học tập và ghi nhớ kiến thức một cách hiệu quả đang ngày càng 
+              trở nên quan trọng trong mọi lĩnh vực, từ học thuật đến công việc.
+            </p>
+            <div class="header__icon">
+              <i class="icon--code fa-solid fa-language"></i>
+              <i class="icon--code fa-solid fa-scale-balanced"></i>
+              <i class="icon--code fa-solid fa-calculator"></i>
+              <i class="icon--code fa-solid fa-book-atlas"></i>
+              <i class="icon--code fa-solid fa-dna"></i>
+              <i class="icon--code fa-solid fa-file-word"></i>
+              <i class="icon--code fa-solid fa-flask-vial"></i>
+              <i class="icon--code fa-solid fa-file-code"></i>
+            </div>
+          </div>
+        </div>
+      </div>
 
           <!-- MAIN -->
            <div class="container-fluid main-content">
@@ -129,6 +178,14 @@
               <div class="text-part">
                 <h3>Mọi lớp học, mọi bài thi, một ứng dụng học tập tối ưu. </h3>
                 <p>Tạo thẻ ghi nhớ của riêng bạn hoặc tìm học phần do giáo viên, học sinh và chuyên gia tạo nên. Học mọi lúc, mọi nơi với ứng dụng miễn phí của chúng tôi.</p>
+                <div class="app-promo__links">
+                  <a href="#" class="app-link">
+                      <img src="{{ asset('imgs/app-store.png') }}" alt="Tải về trên App Store" />
+                  </a>
+                  <a href="#" class="app-link">
+                      <img src="{{ asset('imgs/gg-play.png') }}" alt="Tải nội dung trên Google Play" />
+                  </a>
+                </div>
               </div>
              </div>
              <!-- ---------PART THREE---------- -->
@@ -136,6 +193,7 @@
              <div class="text-part">
                 <h3>Chọn cách học mà bạn muốn. </h3>
                 <p>Biến thẻ ghi nhớ thành câu hỏi trắc nghiệm và nhiều nội dung khác với chế độ Học. Củng cố kiến thức của bạn bằng các trò chơi học tập như Ghép thẻ.</p>
+                <button>Bắt đầu</button>
               </div>
               <div class="img-part">
                 <img class="d-block" src="{{ asset('imgs/partthree.avif') }}" alt="Ảnh không tải được">
@@ -149,6 +207,7 @@
               <div class="text-part">
                 <h3>Chuẩn bị ôn thi cho bất kỳ môn học nào. </h3>
                 <p>Ghi nhớ mọi thứ với các bài kiểm tra thử và phiên học được cá nhân hóa. 98% học sinh cho biết Flashcard đã giúp họ hiểu bài hơn.</p>
+                <button>Bắt đầu</button>
               </div>
              </div>
              <!-- -------------- -->
@@ -161,6 +220,7 @@
              <div class="text-part">
                 <h3>Truyền năng lượng cho học sinh. </h3>
                 <p>Giúp mọi học viên tự tin học bất cứ điều gì. Với các học phần miễn phí, chế độ học và trò chơi trong lớp như Flashcard Live, bạn có thể ngay lập tức tạo ra một lớp học gắn kết hơn.</p>
+                <button>Đăng kí với tư cách thành viên</button>
               </div>
               <div class="img-part">
                 <img class="d-block" src="{{ asset('imgs/partfive.avif') }}" alt="Ảnh không tải được">

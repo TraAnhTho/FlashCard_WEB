@@ -1,5 +1,9 @@
 $main-color: #4255ff;
 $white-color: #ffff;
+$black-color: #000000;
+$or-color: #ffcd1f;
+
+$color-gray-200: #e1e8ed93;
 @mixin gird {
     /* nếu kichthuoc be hơn 1200px tự điều chỉnh */
     max-width: 95%;
@@ -51,7 +55,7 @@ button {
     height: 4.5rem;
     border: 0;
     margin: 0 auto;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2rem;
     align-items: center;
 }
 .icon-main {
@@ -61,4 +65,10 @@ button {
 .icon-white {
     color: $white-color;
     padding: 0;
+}
+.bar-choose {
+    border: 0.3rem solid $main-color;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    width: 100%;
 }

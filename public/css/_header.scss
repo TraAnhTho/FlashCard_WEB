@@ -20,13 +20,23 @@
 }
 .nav {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
 }
 .nav-container {
-    height: 12%;
+    height: 11%;
     background-color: #ffff;
-    justify-content: space-around;
+    // justify-content: space-around;
     position: fixed;
     top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
 }
 .nav-container :nth-child(1) {
     flex: 0.1;
@@ -42,6 +52,7 @@
 .nav-item a,
 .nav-item button {
     font-size: 1.5rem;
+    padding: 0rem 1rem;
 }
 /* Áp dụng tỷ lệ cho từng box */
 .nav .nav-item:nth-child(1),
@@ -74,4 +85,28 @@
     font-size: 14px;
     color: #707070; /* Màu chữ xám đậm */
     background-color: transparent; /* Loại bỏ màu nền */
+}
+// --------------------UNDER HEADER-------------
+.gird {
+    max-width: 100%;
+    /* căn giữa */
+    margin: 0 auto;
+}
+.under-header--border {
+    background-color: $color-gray-200;
+    border: 1 solid $color-gray-200;
+    border-radius: 3rem;
+    height: 18rem;
+    margin: 2rem 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.header__icon {
+    justify-content: space-around;
+    display: flex;
+}
+.icon--code {
+    font-size: 5rem;
+    padding: 2rem;
+    color: rgba(30, 29, 29, 0.696);
 }

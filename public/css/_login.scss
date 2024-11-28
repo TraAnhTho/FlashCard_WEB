@@ -1,26 +1,48 @@
-.login-container {
+.login-container, .res-container {
     display: flex;
     flex-direction: row;
+    gap: 3rem;
+    padding-left: 0;
 }
-.par-login,
-.var-login {
-    // flex-basis: 50%;
-    width: 49%;
+.par-login, .par-res {
+    height: 100vh;
+    display: flex;
+    flex: 50% 1;
+    // background-color: #140202;
+    padding-left: 0;
 }
-.img_par-login {
-    height: fit-content;
+.par-login img,
+.par-res img {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    padding-left: 0;
 }
-.form-login {
-    margin: 2rem;
+.var-login, 
+.var-res {
+    flex: 50% 1;
+}
+.bar-lo-re {
+    display: flex;
+    width: 45rem;
+    padding: 5rem 3rem 1rem;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+.bar-lo,
+.bar-re {
+    width: 30%;
 }
 .form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
     background-color: #ffffff;
-    padding: 30px;
-    width: 450px;
+    padding: 0rem 3rem;
+    width: 45rem;
     border-radius: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -66,7 +88,8 @@
     border: 1.5px solid #2d79f3;
 }
 
-.flex-row {
+.flex-form-row {
+    background-image: url(../imgs/circle-image-1.jpg);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -74,7 +97,7 @@
     justify-content: space-between;
 }
 
-.flex-row > div > label {
+.flex-form-row > div > label {
     font-size: 14px;
     color: black;
     font-weight: 400;

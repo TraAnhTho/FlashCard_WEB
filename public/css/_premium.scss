@@ -1,0 +1,165 @@
+.premium-container {
+    align-items: center;
+    margin: 12% auto 5%; /* Căn giữa theo chiều ngang */
+    display: flex;
+    flex-direction: column; /* Đưa các phần tử xếp theo chiều dọc */
+    align-items: center;
+    justify-content: center;
+    color: $white-color;
+}
+.premium-container h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+p.subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $white-color;
+}
+p.subtitle span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $white-color;
+}
+.subtitle {
+    margin: 20px 0;
+    font-weight: bold;
+    align-items: center;
+}
+
+.pricing {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: $white-color;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.pricing-card:nth-child(1) {
+    position: relative;
+}
+
+.pricing-card .tag {
+    position: absolute;
+    top: -1rem;
+    left: 35%;
+    background-color: #ffd700;
+    color: #11172b;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.pricing-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.pricing-card .price {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ffd700;
+}
+
+.pricing-card button {
+    background-color: #ffd700;
+    color: #11172b;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: #ffc300;
+    filter: brightness(1.2); /* Làm sáng hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng di chuyển lên nhẹ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tăng bóng */
+    transition: all 0.3s ease;
+}
+.subtitle .highlight:nth-child(1) {
+    background-color: #8c7620;
+    animation: blink 5s infinite; /* Hiệu ứng nhấp nháy */
+}
+.subtitle .highlight:nth-child(3) {
+    background-color: #295f87;
+    animation: blink 5s infinite; /* Hiệu ứng nhấp nháy */
+}
+.subtitle .highlight:nth-child(4) {
+    background-color: #7d537f;
+    animation: blink 5s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+@keyframes blink {
+    20% {
+        opacity: 1;
+        background-color: rgba(119, 52, 98, 0.614); /* Đổi màu nền tạm thời */
+    }
+    40% {
+        opacity: 1; /* Mờ hoàn toàn */
+        background-color: rgba(65, 119, 52, 0.667); /* Đổi màu nền tạm thời */
+    }
+    100% {
+        opacity: 1; /* Trở lại bình thường */
+    }
+}
+// ==========================================================================
+.how-it-works {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: $white-color;
+    padding: 5rem 0;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.step {
+    width: 30%;
+    text-align: left;
+    padding: 3rem;
+}
+
+.step .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.pricing h1 {
+    margin: 0 auto;
+}
+.pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.pricing ul li {
+    margin: 10px 0;
+    color: $white-color;
+}
+.pricing ul li i {
+    color: $or-color;
+}
+
+.pricing {
+    margin-bottom: 5rem;
+    color: $white-color;
+    display: flex;
+    justify-content: center;
+}

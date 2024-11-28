@@ -8,6 +8,11 @@
     height: 49.3rem;
     margin: 2rem 0rem;
     gap: 2rem; /* Khoảng cách giữa các phần tử */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
 }
 /* Tùy chỉnh thanh cuộn ngang */
 .caro-inner::-webkit-scrollbar {
@@ -92,6 +97,18 @@
 .content-part--three,
 .content-part--four {
     margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.content-part--five {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
 }
 .img-part,
 .text-part {
@@ -121,4 +138,32 @@
 .content-part--four .text-part:nth-child(2),
 .content-part--five .img-part:nth-child(2) {
     margin-left: 3rem;
+}
+
+/* Các liên kết tải ứng dụng */
+.app-promo__links {
+    margin-top: 3rem;
+    display: flex; /* Sử dụng flexbox */
+    justify-content: flex-start; /* Căn giữa các nút */
+    gap: 2rem; /* Khoảng cách giữa các liên kết */
+}
+
+/* Liên kết đến các cửa hàng ứng dụng */
+.app-link img {
+    width: 150px; /* Chiều rộng hình ảnh */
+    border-radius: 0.5rem; /* Bo góc */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover */
+.app-link img:hover {
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+.text-part p,
+.text-part button {
+    margin-top: 2rem;
+}
+.text-part button {
+    align-items: center;
+    padding: 1rem 3rem;
 }
