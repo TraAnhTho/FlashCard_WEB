@@ -1,0 +1,120 @@
+.home-nav-container {
+    background-color: $gray-100-twilight-900;
+    z-index: 2;
+}
+.home-nav-item {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.home-nav {
+    justify-content: normal;
+}
+.home-nav-container :nth-child(1) {
+    flex: 0.05;
+    text-align: center;
+}
+.home-nav-container :nth-child(2) {
+    flex: 0.1;
+    margin-left: 0;
+    padding-left: 0;
+}
+.home-nav-container :nth-child(3) {
+    flex: 0.85;
+}
+.home-nav-item a,
+.home-nav-item button {
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+}
+.home-nav-item:nth-child(1) {
+    padding: 0.5rem 2rem;
+    flex: 0.6;
+    text-align: left;
+}
+.home-nav-item:nth-child(2) {
+    flex: 0.15;
+    text-align: right;
+}
+.home-nav-item:nth-child(3) {
+    flex: 0.1;
+}
+.home-nav-item:nth-child(4) {
+    flex: 0.1;
+    text-align: right;
+}
+.home-img-circle {
+    border-radius: 50%;
+    width: 65%;
+}
+.home-nav-container {
+    display: flex;
+    gap: 2rem;
+}
+.home-nav-item button div {
+    overflow: hidden; /* Ẩn phần vượt quá */
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Không xuống dòng */
+}
+// --------------------------------------------
+.home-bar {
+    background-color: $gray-100-twilight-900;
+    position: fixed;
+    top: 5%;
+    z-index: 1;
+    height: 100%;
+    width: 6%;
+}
+.home-bar-menu {
+    margin-top: 120%;
+}
+.home-bar-menu ul {
+    display: flex;
+    gap: 2rem;
+    padding: inherit;
+}
+.icon-home {
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    padding: 0.2rem 0rem;
+}
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menu-text {
+    display: none;
+    color: $white-color;
+    width: 60%;
+    font-size: 2rem;
+}
+// -------------------
+.home-header {
+    position: inherit;
+}
+.user-profile {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    border: 0.2rem solid $white-color;
+    width: 40rem;
+    height: 20rem;
+    background-color: $gray-100-twilight-900;
+    border-radius: 1rem;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.user-img {
+    width: 15rem;
+    height: 15rem;
+    margin: 2.5rem;
+}
+.user-profile div {
+    margin: 3.5rem 0.5rem;
+    width: 50%;
+    color: $white-color;
+}

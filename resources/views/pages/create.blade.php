@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <script src="{{ asset('js/main.js') }}"></script>
-    <title>FlashCard</title>
+    <title>Create FlashCard</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 </head>
 <body style="background-color: #111347;">
@@ -72,8 +72,60 @@
                 </ul>
             </div>
         </div>
-        
+        <!-- ================================================================================================================================ -->
+        <div class="create-container conatiner-fluid flex-column" >
+            <div class="create_div flex-row">
+                <h1>Tạo một học phần mới</h1>
+                <div class="flex-row">
+                    <button>Tạo</button>
+                    <button>Tạo và học tập</button>
+                </div>
+            </div>
+            <!-- ---------------- -->
+             <div class="create_div flex-column">
+                <input type="text" placeholder="Nhập tiêu đề, ví dụ &quot;Sinh học - Chương 22: Tiến hóa&quot;" maxlength="255" />
+                <input type="text" placeholder="Thêm mô tả..." maxlength="255" />
+                <div class="flex-column">
+                    <div class="flex-row"><button>1</button><button>2</button><button>3</button></div>
+                    <div class="flex-row"><button>4</button><button>5</button><button>6</button></div>
+                </div>
+             </div>
+             <!-- -------------------- -->
+            <div class="flashcard-container">
+                    <div id="flashcardsContainer">
+                        <div class="flashcard-item">
+                            <div class="header">
+                                <h5>1</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-column">
+                                    <label>Thuật ngữ</label>
+                                    <input type="text" placeholder="Nhập thuật ngữ" />
+                                </div>
+                                <div class="flex-column">
+                                    <label>Định nghĩa</label>
+                                    <input type="text" placeholder="Nhập định nghĩa" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Flashcards will be dynamically added here -->
+                    </div>
+                    <button class="btn btn-success mb-3" id="addFlashcardBtn">
+                        <i class="fa-solid fa-plus"></i> Thêm Flashcard
+                    </button>
+            </div>
+                <!-- -------------------- -->
 
+
+
+        <!-- --------------------- -->
+        </div>
+
+
+        <!-- ================================================================================================================================ -->
     </div>
 </body>
 </html>

@@ -15,3 +15,12 @@ Route::get('/login', function () {
 Route::get('/premium', function () {
     return view('pages/premium');
 });
+Route::get('/home', function () {
+    return view('pages/home');
+});
+Route::get('/create', function () {
+    return view('pages/create');
+});
+Route::get('/learn', function () {
+    return view('pages/learn');
+});

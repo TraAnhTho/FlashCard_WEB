@@ -20,7 +20,7 @@
     
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <title>Quizlet Plus</title>
+    <title>Flashcard Plus</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 </head>
 <body style="background-color: #111347;" >
@@ -53,7 +53,7 @@
             <strong>7,99 US$</strong>/tháng
           </p>
           <p>Thanh toán định kỳ. Hủy bất kỳ lúc nào.</p>
-          <button>Mua Quizlet Plus</button>
+          <button>Mua Flashcard Plus</button>
         </div>
       </div>
     </div>
@@ -61,13 +61,13 @@
     <div class="container-fluid">
     <!-- Phần thông tin về cách hoạt động -->
     <section class="how-it-works">
-      <h2>Cách hoạt động của bạn dùng thử miễn phí Quizlet Plus*</h2>
+      <h2>Cách hoạt động của bạn dùng thử miễn phí Flashcard Plus*</h2>
       <p>*Gói dịch vụ hàng tháng không có dùng thử miễn phí</p>
       <div class="steps">
         <div class="step">
           <span class="icon">🔒</span>
           <h3>Hôm nay: Truy cập tức thì</h3>
-          <p>Nhận 7 ngày dùng thử miễn phí Quizlet Plus khi bạn đăng ký sử dụng một gói dịch vụ hàng năm.</p>
+          <p>Nhận 7 ngày dùng thử miễn phí Flashcard Plus khi bạn đăng ký sử dụng một gói dịch vụ hàng năm.</p>
         </div>
         <div class="step">
           <span class="icon">🔔</span>
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <!-- Phần thông tin về gói Quizlet Plus -->
+    <!-- Phần thông tin về gói Flashcard Plus -->
     <section class="pricing flex-column">
       <h1>Flashcard Plus</h1>
       <ul>
@@ -109,7 +109,7 @@
             <strong>7,99 US$</strong>/tháng
           </p>
           <p>Thanh toán định kỳ. Hủy bất kỳ lúc nào.</p>
-          <button>Mua Quizlet Plus</button>
+          <button>Mua Flashcard Plus</button>
         </div>
       </div>
       

@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <script src="{{ asset('js/main.js') }}"></script>
-    <title>FlashCard</title>
+    <title>Learn FlashCard</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 </head>
 <body style="background-color: #111347;">
@@ -72,6 +72,31 @@
                 </ul>
             </div>
         </div>
+        <!-- =========================================================== -->
+
+
+        <div class="learn-container">
+            <div class="flex-row">
+                <div class="learn-card" >
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. Ullam, recusandae! 
+                        Esse veritatis deleniti asperiores, quaerat assumenda 
+                        nihil perferendis possimus corrupti nam voluptatem! 
+                        Laudantium cum, rem ad corrupti veniam cumque doloribus?</p>
+                </div>
+                <button>Next</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- ======================================================== -->
         
 
     </div>

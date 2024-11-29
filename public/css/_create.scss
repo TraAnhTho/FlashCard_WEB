@@ -1,0 +1,32 @@
+.create-container {
+    margin-top: 8%;
+    margin-left: 10%;
+    padding-right: 10%;
+}
+.create_div input {
+    width: 80%;
+}
+// -----------
+
+.flashcard-item {
+    background-color: #1e1e30;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flashcard-item h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #f0ad4e;
+}
+
+.progress {
+    height: 5px;
+    margin-top: 10px;
+}

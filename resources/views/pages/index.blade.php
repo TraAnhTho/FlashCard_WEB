@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
     
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <title>FlashCard</title>
+    <title>Trang chủ FlashCard</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 
 </head>
@@ -80,7 +80,7 @@
             </div>
             <div class="title-contain container">
                 <h1>Bạn muốn học như thế nào? </h1>
-                <p>Nắm vững kiến thức đang học với thẻ ghi nhớ tương tác, bài kiểm tra thử và hoạt động học tập của Quizlet.</p>
+                <p>Nắm vững kiến thức đang học với thẻ ghi nhớ tương tác, bài kiểm tra thử và hoạt động học tập của Flashcard.</p>
                 <button class="" onclick="window.location.href='{{  url('/register')}}'">Đăng Kí Miễn Phí</button>
                 <br>
                 <span>Đã có tài khoản <a href="{{ url('/login') }}">Đăng nhập</a></span>
@@ -193,7 +193,7 @@
              <div class="text-part">
                 <h3>Chọn cách học mà bạn muốn. </h3>
                 <p>Biến thẻ ghi nhớ thành câu hỏi trắc nghiệm và nhiều nội dung khác với chế độ Học. Củng cố kiến thức của bạn bằng các trò chơi học tập như Ghép thẻ.</p>
-                <button>Bắt đầu</button>
+                <button onclick="window.location.href='{{  url('/register')}}'">Bắt đầu</button>
               </div>
               <div class="img-part">
                 <img class="d-block" src="{{ asset('imgs/partthree.avif') }}" alt="Ảnh không tải được">
@@ -207,7 +207,7 @@
               <div class="text-part">
                 <h3>Chuẩn bị ôn thi cho bất kỳ môn học nào. </h3>
                 <p>Ghi nhớ mọi thứ với các bài kiểm tra thử và phiên học được cá nhân hóa. 98% học sinh cho biết Flashcard đã giúp họ hiểu bài hơn.</p>
-                <button>Bắt đầu</button>
+                <button onclick="window.location.href='{{  url('/register')}}'">Bắt đầu</button>
               </div>
              </div>
              <!-- -------------- -->
@@ -220,7 +220,7 @@
              <div class="text-part">
                 <h3>Truyền năng lượng cho học sinh. </h3>
                 <p>Giúp mọi học viên tự tin học bất cứ điều gì. Với các học phần miễn phí, chế độ học và trò chơi trong lớp như Flashcard Live, bạn có thể ngay lập tức tạo ra một lớp học gắn kết hơn.</p>
-                <button>Đăng kí với tư cách thành viên</button>
+                <button onclick="window.location.href='{{  url('/register')}}'">Đăng kí với tư cách thành viên</button>
               </div>
               <div class="img-part">
                 <img class="d-block" src="{{ asset('imgs/partfive.avif') }}" alt="Ảnh không tải được">

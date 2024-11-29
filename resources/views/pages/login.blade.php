@@ -20,7 +20,7 @@
     
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <title>FlashCard</title>
+    <title>Login FlashCard</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 
  </head>
