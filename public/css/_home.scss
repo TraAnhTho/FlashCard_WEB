@@ -2,9 +2,15 @@
     background-color: $gray-100-twilight-900;
     z-index: 2;
 }
-.home-nav-item {
+.home-nav-item.search-item {
     text-align: center;
     padding: 1rem 0rem;
+    background-color: $gray-100-gray-700;
+    input {
+        input::placeholder {
+            color: $white-color;
+        }
+    }
 }
 .home-nav {
     justify-content: normal;

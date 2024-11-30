@@ -236,7 +236,7 @@
 
          <!-- FOOTER -->
          <footer id="footer">
-        <div class="footer--background container">
+        <div class="footer--background container" >
           <div class="gird d-flex flex-column footerbox">
             <div class="footer_box footer_box--1 d-flex flex-row">
               <div class="footer_box--1--content">
@@ -282,29 +282,19 @@
               <p class="text" >
                 Đăng ký để nhận thông tin cập nhật mới nhất.
               </p>
-              <div class="email_button gird gird--center gird--center--row">
+              <div class="email_button gird gird--center gird--center--row search-item">
                 <input
                   type="text"
                   value=""
                   placeholder="Nhập Địa Chỉ Email Của Bạn"
-                  style="color: rgb(219, 112, 147); width: 50%"
                 />
-                <button
-                  style="
-                    background-color: rgb(219, 112, 147);
-                    color: --color_white;
-                    border: 0;
-                    width: 20%;
-                  "
-                >
-                  Đăng Kí
-                </button>
+                <button>Đăng Kí</button>
               </div>
             </div>
             <div class="footer_box footer_box--3">
               <p class="fontw">
                 Được Hỗ Trợ Bởi
-                <span style="color: rgb(219, 112, 147)"> &copy; TraAnhTho</span>
+                <span style="color: #4255ff"> &copy; TraAnhTho</span>
                 &nbsp;
               </p>
             </div>

@@ -1,13 +1,8 @@
 .caro-item:hover {
     cursor: pointer;
-    height: 90%;
+    transform: scale(1.09);
     border-radius: 4rem;
-    // padding: 3rem;
-    // .caro-item h3 {
-    //     padding: 2rem;
-    // }
-    // .caro-item img {
-    //     padding: 2rem;
-    // }
+    .card-item h3 {
+        color: $white-color;
+    }
 }
-

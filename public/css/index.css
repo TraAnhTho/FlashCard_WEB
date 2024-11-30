@@ -271,6 +271,7 @@ button.or {
   height: 11%;
   background-color: white;
   position: fixed;
+  z-index: 10;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -318,7 +319,7 @@ button.or {
 
 .search-item {
   align-items: center;
-  background-color: #f4f6f9; /* Màu nền nhạt */
+  background-color: rgba(225, 232, 237, 0.5764705882); /* Màu nền nhạt */
   border-radius: 1rem;
   padding: 0.8rem 2.5rem;
   width: 100%;
@@ -462,14 +463,11 @@ button.or {
   overflow-x: scroll; /* Kích hoạt cuộn ngang */
   overflow-y: hidden; /* Ẩn cuộn dọc */
   scrollbar-width: none;
-  width: 100%;
-  height: 49.3rem;
   margin: 2rem 0rem;
-  gap: 2rem; /* Khoảng cách giữa các phần tử */
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 2.5rem;
   justify-content: space-between;
 }
 
@@ -482,9 +480,13 @@ button.or {
   transition: padding 0.3s ease; /* Hiệu ứng chuyển đổi padding */
   flex: 0 0 12%; /* 12% của chiều rộng cha */
   background-color: aliceblue;
+  display: inline-block;
+  height: 40rem;
+  width: 12rem;
   border-radius: 3rem;
   border: 0;
-  height: 80%;
+  position: relative;
+  margin: 3rem 1rem;
 }
 
 .caro-inner .caro-item:nth-child(1),
@@ -510,8 +512,11 @@ button.or {
 }
 
 .img-card {
-  width: 80%;
-  left: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 35rem;
+  width: 12rem;
   border-bottom-right-radius: 2rem;
 }
 
@@ -519,6 +524,9 @@ button.or {
   text-align: center;
   margin: 2rem auto;
   padding-top: 1.5rem;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #000000;
 }
 
 .container-part234 {
@@ -569,7 +577,6 @@ button.or {
 
 .container-part5 {
   background-color: #edefff;
-  margin-bottom: 10rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -792,9 +799,13 @@ p.subtitle span {
   z-index: 2;
 }
 
-.home-nav-item {
+.home-nav-item.search-item {
   text-align: center;
   padding: 1rem 0rem;
+  background-color: #2e3856;
+}
+.home-nav-item.search-item input input::placeholder {
+  color: white;
 }
 
 .home-nav {
@@ -933,14 +944,11 @@ p.subtitle span {
   margin-top: 8%;
   margin-left: 10%;
   padding-right: 10%;
-}
-
-.create_div input {
-  width: 80%;
+  margin-bottom: 3rem;
 }
 
 .flashcard-item {
-  background-color: #1e1e30;
+  background-color: white;
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -954,12 +962,91 @@ p.subtitle span {
 }
 
 .progress-bar {
-  background-color: #f0ad4e;
+  background-color: rgba(225, 232, 237, 0.5764705882);
 }
 
 .progress {
-  height: 5px;
+  height: 0.2rem;
   margin-top: 10px;
+}
+
+.create-container .create_div:nth-child(1) {
+  display: flex;
+  flex: 0.5 0.5;
+  justify-content: space-between;
+}
+.create-container .create_div:nth-child(1) h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.create-container .create_div:nth-child(2) {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+.create-container .create_div:nth-child(2) input {
+  background-color: #2e3856;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+}
+.create-container .create_div:nth-child(2) input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4255ff;
+}
+.create-container .create_div:nth-child(2) input::placeholder {
+  color: gray;
+}
+.create-container .create_div:nth-child(2) input:last-child {
+  margin-bottom: 0;
+}
+.create-container .create_div:nth-child(2) .create_div-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.create-container .create_div:nth-child(2) .create_div-item button {
+  border: 2px solid #2e3856;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.flashcard-ipt {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.flashcard-ipt-item {
+  flex: 0.47;
+  width: 45%;
+}
+
+.flashcard-ipt-item {
+  display: flex;
+  width: 100%;
+}
+.flashcard-ipt-item input {
+  width: 100%;
+  border: 0;
+  border-bottom: 3px solid #0a092d;
+}
+.flashcard-ipt-item input:hover {
+  border-bottom: 5px solid #4255ff;
+}
+
+.flashcard-container button {
+  color: #000000;
+}
+.flashcard-container button:hover {
+  color: white;
+  background-color: #4255ff;
 }
 
 .learn-container {
@@ -980,18 +1067,20 @@ p.subtitle span {
 
 /* PHẦN FOOTER */
 #footer {
+  background-image: url(../imgs/footer.gif);
+  background-size: cover;
+  background-position: bottom right;
   position: relative;
   display: inline-flex;
   justify-content: center;
   min-width: 100%;
-  margin-top: 5rem;
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 .footer--background {
   width: 100%;
   image-rendering: pixelated;
-  background-size: cover;
-  background-repeat: no-repeat;
   /* Tablet */
   padding-right: 50px;
 }
@@ -999,6 +1088,7 @@ p.subtitle span {
 .footerbox {
   flex: 0.6 0.2 0.1;
   justify-content: space-around;
+  gap: 5rem;
 }
 
 .footer_box {
@@ -1008,7 +1098,7 @@ p.subtitle span {
 
 .footer_box--1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer_box--2 {
@@ -1027,10 +1117,18 @@ p.subtitle span {
   border-radius: 0.8rem;
 }
 
+.footer_icon {
+  display: flex;
+  gap: 2rem;
+}
+
 .caro-item:hover {
   cursor: pointer;
-  height: 90%;
+  transform: scale(1.09);
   border-radius: 4rem;
+}
+.caro-item:hover .card-item h3 {
+  color: white;
 }
 
 /* Giao diện cho dropdown */

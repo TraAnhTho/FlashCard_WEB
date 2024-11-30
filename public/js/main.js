@@ -57,23 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         flashcardItem.innerHTML = `
             <div class="flashcard-item">
-            <div class="header">
-                <h5>${flashcardCount}</h5>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="flex-row">
-                <div class="flex-column">
-                    <label>Thuật ngữ</label>
-                    <input type="text" placeholder="Nhập thuật ngữ" />
-                </div>
-                <div class="flex-column">
-                    <label>Định nghĩa</label>
-                    <input type="text" placeholder="Nhập định nghĩa" />
-                </div>
-            </div>
-        </div>
+                            <div class="header">
+                                <h5>${flashcardCount}</h5>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="flashcard-ipt flex-row">
+                                <div class="flashcard-ipt-item flex-column">
+                                    <label>Thuật ngữ</label>
+                                    <input type="text" placeholder="Nhập thuật ngữ" />
+                                </div>
+                                <div class="flashcard-ipt-item flex-column">
+                                    <label>Định nghĩa</label>
+                                    <input type="text" placeholder="Nhập định nghĩa" />
+                                </div>
+                            </div>
+                        </div>
         `;
 
         // Thêm phần tử flashcard vào container

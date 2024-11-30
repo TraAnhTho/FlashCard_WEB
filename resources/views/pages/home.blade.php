@@ -36,11 +36,11 @@
                     <img class="logo-item" src="{{ asset('imgs/logoflashcar_white.png') }}" alt="Ảnh không hiển thị">
                 </div>
                 <ul class="home-nav nav flex-row">
-                    <li class="home-nav-item search-item" style="">
+                    <li class="home-nav-item search-item" >
                         <input type="text"  placeholder=" 🔎︎ Tìm kiếm câu hỏi" />
                     </li>
                     <li class="home-nav-item" >
-                        <button class="" style=""> <i class="icon-white fa-solid fa-plus"></i></button>
+                        <button class="" > <i class="icon-white fa-solid fa-plus"></i></button>
                     </li>
                     <li class="home-nav-item">
                         <button class="or" onclick="window.location.href='{{  url('/premium')}}'"><div>Nâng cấp: dùng thử 7 ngày</div></button>

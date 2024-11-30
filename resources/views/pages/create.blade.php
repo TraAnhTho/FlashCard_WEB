@@ -64,15 +64,15 @@
             <div class="home-bar-menu ">
                 <ul class="flex-column">
                     <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-house"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Trang chủ</span></li>
+                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Thư viện </span></li>
+                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Thông báo</span></li>
                     <li class="menu-item flex-row"></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-layer-group"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-brands fa-youtube"></i> <span class="menu-text">Trang chủ</span></li>
+                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-layer-group"></i> <span class="menu-text">Thẻ ghi chú</span></li>
+                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-brands fa-youtube"></i> <span class="menu-text">Chuyên gia</span></li>
                 </ul>
             </div>
         </div>
-        <!-- ================================================================================================================================ -->
+<!-- ================================================================================================================================ -->
         <div class="create-container conatiner-fluid flex-column" >
             <div class="create_div flex-row">
                 <h1>Tạo một học phần mới</h1>
@@ -85,9 +85,17 @@
              <div class="create_div flex-column">
                 <input type="text" placeholder="Nhập tiêu đề, ví dụ &quot;Sinh học - Chương 22: Tiến hóa&quot;" maxlength="255" />
                 <input type="text" placeholder="Thêm mô tả..." maxlength="255" />
-                <div class="flex-column">
-                    <div class="flex-row"><button>1</button><button>2</button><button>3</button></div>
-                    <div class="flex-row"><button>4</button><button>5</button><button>6</button></div>
+                <div class="create_div-item flex-row">
+                    <div class="flex-row">
+                        <button><i class="icon-white fa-solid fa-earth-americas"></i></button>
+                        <button><i class="icon-white fa-solid fa-lock"></i></button>
+                        <button><i class="icon-white fa-solid fa-gem"></i></button>
+                    </div>
+                    <div class="flex-row">
+                        <button><i class="icon-white fa-solid fa-gear"></i></button>
+                        <button><i class="icon-white fa-solid fa-star"></i></button>
+                        <button><i class="icon-white fa-solid fa-keyboard"></i></button>
+                </div>
                 </div>
              </div>
              <!-- -------------------- -->
@@ -100,12 +108,12 @@
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <div class="flex-row">
-                                <div class="flex-column">
+                            <div class="flashcard-ipt flex-row">
+                                <div class="flashcard-ipt-item flex-column">
                                     <label>Thuật ngữ</label>
                                     <input type="text" placeholder="Nhập thuật ngữ" />
                                 </div>
-                                <div class="flex-column">
+                                <div class="flashcard-ipt-item flex-column">
                                     <label>Định nghĩa</label>
                                     <input type="text" placeholder="Nhập định nghĩa" />
                                 </div>
@@ -125,7 +133,7 @@
         </div>
 
 
-        <!-- ================================================================================================================================ -->
+<!-- ================================================================================================================================ -->
     </div>
 </body>
 </html>
