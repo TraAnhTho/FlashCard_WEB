@@ -25,6 +25,16 @@
 
  </head>
  <body>
+ @if ($errors->any())
+    <div class="alert alert-danger" style="position: fixed;right:0; width: 50%;">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <div class="res-container container-fluid flex-row">
         <div class="par-res">
             <img src="{{ asset('imgs/res.png') }}" alt="" class="img_par-res" href="{{ asset('imgs/res.png') }}">
@@ -40,24 +50,26 @@
             </div>
             <!-- ---------------------- -->
             <div class="form-res">
-                <form class="form">
+                
+                <form class="form"  action="/register/postdangki" method="POST">
+                @csrf
                                 <div class="flex-column">
                                 <label>Ngày sinh </label>
                                 </div>
                                 <div class="inputForm">
-                                <input class="input" type="date" />
+                                <input class="input" name="birthday_reg" type="date" />
                                 </div>
                                 <div class="flex-column">
                                 <label>Email </label>
                                 </div>
                                 <div class="inputForm">
-                                <input placeholder="Enter your Email" class="input" type="email" />
+                                <input placeholder="Enter your Email" class="input" name="email_reg"  type="email" />
                                 </div>
                                 <div class="flex-column">
                                 <label>Tên tài khoản </label>
                                 </div>
                                 <div class="inputForm">
-                                <input placeholder="Enter your name" class="input" type="text" />
+                                <input placeholder="Enter your name" class="input" name="name_reg" type="text" />
                                 </div>
                                 <div class="flex-column">
                                 <label>Mật Khẩu </label>
@@ -68,16 +80,23 @@
                                     placeholder="Enter your Password"
                                     class="input"
                                     type="password"
+                                    name="pass_reg"
                                 />
                                 </div>
+                                <div class="flex-column">
+                                <label for="pass_reg_confirmation">Nhập lại mật khẩu:</label>
+                                </div>
+                                <input  placeholder="Enter your Password"
+                                    class="input"
+                                    type="password" name="pass_reg_confirmation" id="pass_reg_confirmation">
 
                                 <div class="flex-form-row">
                                 <div>
-                                    <input type="radio" />
+                                    <input type="radio" name="remember_reg"/>
                                     <label>Ghi nhớ lần sau </label>
                                 </div>
                                 </div>
-                                <button class="button-submit">Đăng Kí</button>
+                                <button class="button-submit" type="submit">Đăng Kí</button>
                                 <p class="p">
                                 Bạn đã có tài khoản? <span class="span">Đăng nhập</span>
                                 </p>
@@ -153,7 +172,7 @@
                                     Apple
                                 </button>
                                 </div>
-                                
+                           
                 </form>
             </div>
         </div>

@@ -25,6 +25,12 @@
 
  </head>
  <body>
+ @if (session('thongbao'))
+    <div class="alert alert-warning">
+        {{ session('thongbao') }}
+    </div>
+@endif
+
     <div class="login-container container-fluid flex-row">
         <div class="par-login">
             <img src="{{ asset('imgs/login.png') }}" alt="" class="img_par-login" href="{{ asset('imgs/login.png') }}">
@@ -39,13 +45,13 @@
                 </div>
             </div>
             <div class="form-login">
-                <form class="form">
+                <form class="form" action="/login/postdangnhap" method="post">
                                 <div class="flex-column">
                                 <label>Email </label>
                                 </div>
                                 <div class="inputForm">
                                 
-                                <input placeholder="Enter your Email" class="input" type="text" />
+                                <input placeholder="Enter your Email" class="input" type="text" name="email_login" />
                                 </div>
 
                                 <div class="flex-column">
@@ -57,12 +63,13 @@
                                     placeholder="Enter your Password"
                                     class="input"
                                     type="password"
+                                    name="pass_login"
                                 />
                                 </div>
 
                                 <div class="flex-form-row">
                                 <div>
-                                    <input type="radio" />
+                                    <input type="radio" name="remember_login" />
                                     <label>Ghi nhớ lần sau </label>
                                 </div>
                                 <span class="span">Quên mật khẩu?</span>
@@ -143,7 +150,7 @@
                                     Apple
                                 </button>
                                 </div>
-                                
+                    @csrf   
                 </form>
             </div>
         </div>
