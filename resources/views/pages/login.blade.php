@@ -17,6 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -25,17 +26,30 @@
 
  </head>
  <body>
- @if (session('thongbao'))
-    <div class="alert alert-warning">
-        {{ session('thongbao') }}
-    </div>
-@endif
+
 
     <div class="login-container container-fluid flex-row">
         <div class="par-login">
             <img src="{{ asset('imgs/login.png') }}" alt="" class="img_par-login" href="{{ asset('imgs/login.png') }}">
         </div>
         <div class="var-login">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+
             <div class="bar-lo-re flex-row">
                 <div class="bar-lo"> 
                     <span class="bar-choose" >Đăng nhập</span>
@@ -45,7 +59,7 @@
                 </div>
             </div>
             <div class="form-login">
-                <form class="form" action="/login/postdangnhap" method="post">
+                <form class="form" action="/login/postdangnhap" method="POST">
                                 <div class="flex-column">
                                 <label>Email </label>
                                 </div>
@@ -74,7 +88,7 @@
                                 </div>
                                 <span class="span">Quên mật khẩu?</span>
                                 </div>
-                                <button class="button-submit">Đăng nhập</button>
+                                <button class="button-submit" type="submit">Đăng nhập</button>
                                 <p class="p">
                                 Bạn mới sử dụng Flashcard? <span class="span">Đăng kí</span>
                                 </p>

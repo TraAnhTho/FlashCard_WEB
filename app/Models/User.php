@@ -10,19 +10,19 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
 
-    use Notifiable;
-    public $timestamps = false; // Tắt tính năng timestamps
-    protected $table = 'nguoidung'; // Đặt bảng nguoidung
-    protected $primaryKey = 'mand'; // Đặt khóa chính nếu không phải 'id'
-    protected $fillable = [
-        'tennd', 'email', 'matkhaund', 'ngaysinh', 'hinhanh',
-    ];
+    // use Notifiable;
+    // public $timestamps = false; // Tắt tính năng timestamps
+    // protected $table = 'nguoidung'; // Đặt bảng nguoidung
+    // protected $primaryKey = 'mand'; // Đặt khóa chính nếu không phải 'id'
+    // protected $fillable = [
+    //     'tennd', 'email', 'matkhaund', 'ngaysinh', 'hinhanh',
+    // ];
 
-    // Để Laravel nhận diện cột mật khẩu
-    public function getAuthPassword()
-    {
-        return $this->matkhaund;
-    }
+    // // Để Laravel nhận diện cột mật khẩu
+    // public function getAuthPassword()
+    // {
+    //     return $this->matkhaund;
+    // }
 
     // /** @use HasFactory<\Database\Factories\UserFactory> */
     // use HasFactory, Notifiable;

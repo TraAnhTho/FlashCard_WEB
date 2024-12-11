@@ -1,11 +1,12 @@
 <?php
 namespace App\Http\Controllers;
-// namespace App\Http\Controllers\loginController;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\NguoiDung;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class registerController extends Controller
 {
@@ -31,7 +32,7 @@ class registerController extends Controller
         }
 
         // Tạo mới người dùng
-        $user = User::create([
+        $user = NguoiDung::create([
             'tennd' => $request->input('name_reg'),
             'email' => $request->input('email_reg'),
             'ngaysinh' => $request->input('birthday_reg'),
@@ -43,7 +44,9 @@ class registerController extends Controller
         // auth()->login($user);
 
         // Chuyển hướng đến trang chủ hoặc một trang khác
-        return redirect()->route('homes')->with('thongbao', 'Đăng ký thành công!');
+        // return redirect()->route('home')->with('thongbao', 'Đăng ký thành công!');
+        return redirect()->route('home')->with('user', $user);
+
     }
 
 }

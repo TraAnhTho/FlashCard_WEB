@@ -17,6 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -25,21 +26,22 @@
 
  </head>
  <body>
- @if ($errors->any())
-    <div class="alert alert-danger" style="position: fixed;right:0; width: 50%;">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+ 
 
     <div class="res-container container-fluid flex-row">
         <div class="par-res">
             <img src="{{ asset('imgs/res.png') }}" alt="" class="img_par-res" href="{{ asset('imgs/res.png') }}">
         </div>
         <div class="var-res">
+            @if ($errors->any())
+                <div class="alert alert-danger" >
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="bar-lo-re flex-row">
                 <div class="bar-re">
                     <a href="{{ url('/login') }}">Đăng nhập</a>
@@ -50,6 +52,8 @@
             </div>
             <!-- ---------------------- -->
             <div class="form-res">
+
+            
                 
                 <form class="form"  action="/register/postdangki" method="POST">
                 @csrf

@@ -1,32 +1,33 @@
-                            <!-- <div class="dropdown">
-                            <button class="dropdown-btn">Chủ đề</button>
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <span>Bài thi</span>
-                                    <div class="submenu">
-                                        <a href="#">IELTS</a>
-                                        <a href="#">TOEFL</a>
-                                        <a href="#">TOEIC</a>
-                                        <a href="#">Xem tất cả</a>
-                                    </div>
-                                </div>
-                            <div class="dropdown-item">
-                                <span>Nghệ thuật và nhân văn</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Ngôn ngữ</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Toán học</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khoa học</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khoa học xã hội</span>
-                            </div>
-                            <div class="dropdown-item">
-                                <span>Khác</span>
-                            </div>
-                            </div>
-                        </div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    /> -->
+    <!-- Bootstrap CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <script src="{{ asset('js/main.js') }}"></script>
+    <title>Create FlashCard</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
+</head>
+<body style="background-color: #111347;">
+    @include('pages.homes') 
+    
+</body>
+</html>

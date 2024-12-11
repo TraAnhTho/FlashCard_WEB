@@ -895,7 +895,7 @@ p.subtitle span {
   padding: 0.2rem 0rem;
 }
 
-.menu-item {
+.menu-item a {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -940,7 +940,12 @@ p.subtitle span {
   color: white;
 }
 
+.menu-item a:hover {
+  cursor: pointer;
+}
+
 .create-container {
+  width: 95%;
   margin-top: 8%;
   margin-left: 10%;
   padding-right: 10%;
@@ -1049,6 +1054,14 @@ p.subtitle span {
   background-color: #4255ff;
 }
 
+.btn-create {
+  width: 85%;
+  margin-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
 .learn-container {
   margin-top: 8%;
   margin-left: 10%;
@@ -1063,6 +1076,30 @@ p.subtitle span {
   height: 35%;
   padding: 1rem 2rem;
   margin: 0 auto;
+}
+
+.user-container {
+  width: 95%;
+  margin-top: 8%;
+  margin-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3rem;
+  border: 0.2rem solid white;
+  background-color: #0a092d;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.user-img--user {
+  width: 15rem;
+  height: 15rem;
+  margin: 2.5rem;
+}
+
+.user-container div {
+  margin: 3.5rem 0.5rem;
+  width: 50%;
+  color: white;
 }
 
 /* PHẦN FOOTER */

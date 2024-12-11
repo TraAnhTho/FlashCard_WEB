@@ -84,7 +84,7 @@
     margin: 0 auto;
     padding: 0.2rem 0rem;
 }
-.menu-item {
+.menu-item a {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -123,4 +123,7 @@
     margin: 3.5rem 0.5rem;
     width: 50%;
     color: $white-color;
+}
+.menu-item a:hover {
+    cursor: pointer;
 }

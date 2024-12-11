@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <!-- <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    /> -->
-    <!-- Bootstrap CSS -->
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <script src="{{ asset('js/main.js') }}"></script>
-    <title>FlashCard</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
-</head>
-<body style="background-color: #111347;">
-    <div class="home-container">
+<div class="home-container">
         <header class="home-header header" >
             <div class="home-nav-container nav-container container-fluid flex-row">
                 <div class="bar-item" role="button" tabindex="0">
@@ -40,10 +12,10 @@
                         <input type="text"  placeholder=" 🔎︎ Tìm kiếm câu hỏi" />
                     </li>
                     <li class="home-nav-item" >
-                        <button class="" > <i class="icon-white fa-solid fa-plus"></i></button>
+                        <button class="" ><a href="{{  url('/create')}}"><i class="icon-white fa-solid fa-plus"></i></a> </button>
                     </li>
                     <li class="home-nav-item">
-                        <button class="or" onclick="window.location.href='{{  url('/premium')}}'"><div>Nâng cấp: dùng thử 7 ngày</div></button>
+                        <button class="or" ><div><a href="{{  url('/premium')}}" target="_blank" style="color: black;" rel="noopener noreferrer">Nâng cấp: dùng thử 7 ngày</a></div></button>
                     </li>
                     <li class="home-nav-item user-item" role="button" tabindex="0">
                         <img class="home-img-circle" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
@@ -52,10 +24,22 @@
             </div>
             <div class="user-profile flex-row">
                 <!-- <div class=""> -->
+                <img class="home-img-circle user-img" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
+
+                <!-- @if($user && $user->hinhanh)
+                    <img class="home-img-circle user-img" src="{{ asset('path/to/images/' . $user->hinhanh) }}" alt="Ảnh không hiển thị">
+                @else
                     <img class="home-img-circle user-img" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
+                @endif -->
                     <div>
-                        <h2>user name</h2>
-                        <h3>email@gmail.com</h3>
+                    
+                    @if($user)
+                        <h2>{{ $user->tennd }}</h2>
+                        <h3>{{ $user->email }}</h3>
+                    @else
+                        <h2>Tên người dùng không có sẵn</h2>
+                         <h3>Email người dùng không có sẵn</h3>
+                     @endif
                     </div>
                 <!-- </div> -->
             </div>
@@ -63,19 +47,28 @@
         <div class="home-bar">
             <div class="home-bar-menu ">
                 <ul class="flex-column">
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-house"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-solid fa-layer-group"></i> <span class="menu-text">Trang chủ</span></li>
-                    <li class="menu-item flex-row"><i class="icon-white icon-home fa-brands fa-youtube"></i> <span class="menu-text">Trang chủ</span></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/home')}}"><i class="icon-white icon-home fa-solid fa-house"></i> <span class="menu-text">Trang chủ</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/premium')}}"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Thư viện</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/blog')}}"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Thông báo</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/create')}}"><i class="icon-white icon-home fa-solid fa-layer-group"></i> <span class="menu-text">Thẻ ghi nhớ</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/premium')}}" target="_blank"><i class="icon-white icon-home fa-brands fa-youtube"></i> <span class="menu-text">Chuyên gia</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/users')}}"><i class="icon-white icon-home fa-solid fa-gear"></i><span class="menu-text">Cài đặt</span></a></li>
+
                 </ul>
             </div>
         </div>
-        
+        @if (session('success'))
+            <script>
+                Swal.fire({
+                    title: 'Thành công!',
+                    text: '{{ session('success') }}',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            </script>
+        @endif
+
         
 
     </div>
     
-</body>
-</html>

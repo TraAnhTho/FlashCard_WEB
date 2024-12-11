@@ -66,11 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="flashcard-ipt flex-row">
                                 <div class="flashcard-ipt-item flex-column">
                                     <label>Thuật ngữ</label>
-                                    <input type="text" placeholder="Nhập thuật ngữ" />
+                                    <input type="text" name="flashcards[${
+                                        flashcardCount - 1
+                                    }][tn_card]" placeholder="Nhập thuật ngữ" />
                                 </div>
                                 <div class="flashcard-ipt-item flex-column">
                                     <label>Định nghĩa</label>
-                                    <input type="text" placeholder="Nhập định nghĩa" />
+                                    <input type="text" name="flashcards[${
+                                        flashcardCount - 1
+                                    }][dn_card]" placeholder="Nhập định nghĩa" />
                                 </div>
                             </div>
                         </div>
