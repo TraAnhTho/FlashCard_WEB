@@ -90,3 +90,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Đăng ký sự kiện khi nhấn vào nút
     addFlashcardBtn.addEventListener("click", addFlashcard);
 });
+// Hàm để tạo số ngẫu nhiên và hiển thị trong phần tử HTML
+function generateRandomNumber() {
+    const randomNumber = Math.floor(Math.random() * 10000) + 1; // Số ngẫu nhiên từ 1 đến 10000
+    return randomNumber;
+}
+
+// Gọi hàm ngay khi trang được tải
+document.addEventListener("DOMContentLoaded", function() {
+    // Lặp qua tất cả các phần tử có class 'random-number'
+    const randomNumberElements = document.querySelectorAll('.random-number');
+    
+    randomNumberElements.forEach(function(element) {
+        const randomNumber = generateRandomNumber(); // Tạo số ngẫu nhiên
+        element.innerText = randomNumber; // Gắn số vào phần tử
+    });
+});
+

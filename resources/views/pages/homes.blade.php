@@ -18,14 +18,17 @@
                         <button class="or" ><div><a href="{{  url('/premium')}}" target="_blank" style="color: black;" rel="noopener noreferrer">Nâng cấp: dùng thử 7 ngày</a></div></button>
                     </li>
                     <li class="home-nav-item user-item" role="button" tabindex="0">
-                        <img class="home-img-circle" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
+                        <img class="home-img-circle" src="{{ Storage::url($user->hinhanh) }}" alt="Ảnh không hiển thị">
                     </li>
                 </ul>
             </div>
-            <div class="user-profile flex-row">
+            <div style="z-index: 12;" class="user-profile flex-row">
                 <!-- <div class=""> -->
-                <img class="home-img-circle user-img" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
-
+                @if($user && $user->hinhanh)
+                    <img class="home-img-circle user-img" src="{{ Storage::url($user->hinhanh) }}" alt="Ảnh không hiển thị">
+                    @else
+                        <img class="home-img-circle user-img" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
+                    @endif
                 <!-- @if($user && $user->hinhanh)
                     <img class="home-img-circle user-img" src="{{ asset('path/to/images/' . $user->hinhanh) }}" alt="Ảnh không hiển thị">
                 @else
@@ -48,8 +51,8 @@
             <div class="home-bar-menu ">
                 <ul class="flex-column">
                     <li class="menu-item flex-row"><a href="{{  url('/home')}}"><i class="icon-white icon-home fa-solid fa-house"></i> <span class="menu-text">Trang chủ</span></a></li>
-                    <li class="menu-item flex-row"><a href="{{  url('/premium')}}"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Thư viện</span></a></li>
-                    <li class="menu-item flex-row"><a href="{{  url('/blog')}}"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Thông báo</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/folder')}}"><i class="icon-white icon-home fa-regular fa-folder-open"></i> <span class="menu-text">Thư viện</span></a></li>
+                    <li class="menu-item flex-row"><a href="{{  url('/blog')}}"><i class="icon-white icon-home fa-solid fa-bell"></i> <span class="menu-text">Bài viết</span></a></li>
                     <li class="menu-item flex-row"><a href="{{  url('/create')}}"><i class="icon-white icon-home fa-solid fa-layer-group"></i> <span class="menu-text">Thẻ ghi nhớ</span></a></li>
                     <li class="menu-item flex-row"><a href="{{  url('/premium')}}" target="_blank"><i class="icon-white icon-home fa-brands fa-youtube"></i> <span class="menu-text">Chuyên gia</span></a></li>
                     <li class="menu-item flex-row"><a href="{{  url('/users')}}"><i class="icon-white icon-home fa-solid fa-gear"></i><span class="menu-text">Cài đặt</span></a></li>

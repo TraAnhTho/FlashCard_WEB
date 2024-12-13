@@ -29,6 +29,29 @@
 </head>
 <body style="background-color: #111347;">
     @include('pages.homes') 
+    <div class="ho-container">
+          <div class="flex-row">
+              <div class="ho-card" >
+                 <div class="container mt-4">
+                    <h1 style="color: white;" class="text-center">Bộ thẻ ghi nhớ phổ biến</h1>
+                    <ul class="list-group mt-4 flex-row flex-wrap">
+                        @foreach ($bocards as $bocard)
+                        <li class="list-group-item ho-item">
+                            <h2>
+                              <a href="{{ route('learn', ['malist' => $bocard->malist]) }}">
+                                {{ $bocard->tenlist }}
+                              </a>
+                            </h2>
+                            <div>
+                             <span class="random-number"></span> người học
+                            </div>
+                        </li>
+                        @endforeach
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
     
 </body>
 </html>

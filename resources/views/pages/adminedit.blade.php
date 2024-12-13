@@ -26,8 +26,35 @@
     <title>Create FlashCard</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('imgs/logo.ico') }}" />
 </head>
-<body style="background-color: #111347; color: white;">
-    @include('pages.homes') 
+<body >
     
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($users as $user)
+        <tr>
+            <td>{{ $user->mand }}</td>
+            <td>{{ $user->tennd }}</td>
+            <td>{{ $user->email }}</td>
+            <td>
+                <a href="{{ route('admin.users.edit', $user->mand) }}">Sửa</a> |
+                <form action="{{ route('admin.users.delete', $user->mand) }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 </body>
 </html>
+
+

@@ -35,20 +35,20 @@
                 <form action="/users/updateImg" method="POST" enctype="multipart/form-data">
                     @csrf
                     @if($user && $user->hinhanh)
-                    <img class="home-img-circle user-img" src="{{ asset('path/to/images/' . $user->hinhanh) }}" alt="Ảnh không hiển thị">
+                    <img class="home-img-circle user-img" src="{{ Storage::url($user->hinhanh) }}" alt="Ảnh không hiển thị">
                     @else
                         <img class="home-img-circle user-img" src="{{ asset('imgs/user.jpg') }}" alt="Ảnh không hiển thị">
                     @endif
-                    <input type="file" name="profile_image" accept="image/*">
+                    <input style="background-color: transparent; width: 40%;" type="file" name="profile_image" accept="image/*">
                     <button type="submit">Upload Image</button>
                 </form>
 
 
-                <form action="/users/updateUser"  method="POST" enctype="multipart/form-data">
-                    
+                <form action="/users/updateUser"  method="POST" >
+                    @csrf
                     @if($user)
-                    <h2><input type="text" name="name" value="{{ $user->tennd }}" placeholder="Tên người dùng"></h2>
-                    <h3>{{ $user->email }}</h3>
+                    <h2><input type="text" name="name" value="{{ $user->tennd }}" placeholder="{{ $user->tennd }}"></h2>
+                    <h3><input type="text" name="email" value="{{ $user->email }}" placeholder="{{ $user->email }}"></h3>
                     <input type="password" name="current_password" placeholder="Nhập lại mật khẩu cũ">
                     <input type="password" name="new_password" placeholder="Nhập mật khẩu mới nếu không bỏ trống">
             
@@ -57,11 +57,19 @@
                          <h3>Email người dùng không có sẵn</h3>
 
                      @endif
-                     <button type="submit">chỉnh sửa</button>
+                     <button type="submit">Chỉnh sửa</button>
                     </form>
                 <!-- </div> -->
-                 
+                <button id="logout-button">Đăng xuất</button>
             </div>
+
+            <script>
+    document.getElementById('logout-button').addEventListener('click', function() {
+        if (confirm('Bạn có chắc chắn muốn đăng xuất không?')) {
+            window.location.href = '/'; // Chuyển hướng về trang HTML cụ thể
+        }
+    });
+</script>
     
 </body>
 </html>

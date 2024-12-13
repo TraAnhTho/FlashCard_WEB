@@ -2,11 +2,16 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\NguoiDung;
+use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Bocard;
+use App\Models\Card;
 
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class userController extends Controller
 {
@@ -20,15 +25,23 @@ class userController extends Controller
     public function updateImg(Request $request)
     {
         $request->validate([
-            'hinhanh' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'profile_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
-        $user = Auth::user(); // Get the authenticated user
-
-        if ($request->hasFile('hinhanh')) {
-            $imagePath = $request->file('hinhanh')->store('public/imgs'); // Save image to storage
+        $users = Auth::user();
+        $user = NguoiDung::findOrFail($users->mand);
+        if ($request->hasFile('profile_image')) {
+            // Xóa ảnh cũ nếu có (nếu muốn làm sạch ảnh cũ)
+            if ($user->hinhanh && Storage::exists($user->hinhanh)) {
+                Storage::delete($user->hinhanh);
+            }
+            $imagePath = $request->file('profile_image')->store('imgs'); // Save image to storage public
             $user->hinhanh = $imagePath; // Save image path to the user's profile
-            $user->save();
+            try {
+                $user->Save(); // Save the changes
+                return redirect()->route('users')->with('success', 'Thông tin người dùng đã được cập nhật thành công.');
+            } catch (Exception $e) {
+                return back()->withErrors(['error' => 'Có lỗi xảy ra trong quá trình cập nhật. Vui lòng thử lại.']);
+            }
         }
 
         return redirect()->route('users')->with('success', 'Profile image updated successfully.');
@@ -38,15 +51,39 @@ class userController extends Controller
     public function updateUser(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'name' => 'nullable|string|max:255',
+            'email' => 'nullable|email|max:255',
+            'current_password' => 'required|string', // Thêm trường kiểm tra mật khẩu cũ
+            'new_password' => 'nullable|string|min:8|confirmed', // Trường đổi mật khẩu mới (optional)
+       
         ]);
 
-        $user = Auth::user(); // Get the authenticated user
-        $user->name = $request->name; // Update user name
-        $user->email = $request->email; // Update user email
-        $user->save();
+        $users = Auth::user();
+        $user = NguoiDung::findOrFail($users->mand);
+        // Kiểm tra mật khẩu cũ
+        if (!Hash::check($request->current_password, $user->matkhaund)) {
+            return back()->withErrors(['current_password' => 'Mật khẩu hiện tại không đúng.']);
+        }
+        $user->update([
+            'tennd' => $request->name,
+            'email' => $request->email,
+        ]);
+        // $user->save();
+            
+        
+        // Nếu người dùng nhập mật khẩu mới, cập nhật nó
+        if (!empty($request->new_password)) {
+            
+            $user->matkhaund = Hash::make($request->new_password);
+        }
 
-        return redirect()->route('users')->with('success', 'User information updated successfully.');
+        try {
+            $user->save(); // Save the changes
+            return redirect()->route('users')->with('success', 'Thông tin người dùng đã được cập nhật thành công.');
+        } catch (Exception $e) {
+            Log::error('Error updating user: ' . $e->getMessage());
+
+            return back()->withErrors(['error' => 'Có lỗi xảy ra trong quá trình cập nhật. Vui lòng thử lại.']);
+        }
     }
 }

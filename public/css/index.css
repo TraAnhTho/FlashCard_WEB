@@ -855,7 +855,8 @@ p.subtitle span {
 
 .home-img-circle {
   border-radius: 50%;
-  width: 65%;
+  width: 4rem;
+  height: 4rem;
 }
 
 .home-nav-container {
@@ -944,6 +945,44 @@ p.subtitle span {
   cursor: pointer;
 }
 
+.ho-container {
+  margin-top: 8%;
+  margin-left: 10%;
+  padding-right: 10%;
+}
+
+.ho-item {
+  width: 25%;
+  height: 15rem;
+  margin: 3rem;
+  background-color: #2e3856;
+  border-radius: 1rem;
+}
+.ho-item h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.ho-item div {
+  border: 2px solid #586380;
+  background-color: #586380;
+  padding: 0.2rem 0.4rem;
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách xung quanh chữ */
+  font-size: 16px; /* Kích thước chữ */
+  border-radius: 30px; /* Để đường viền tròn */
+  border: none; /* Bỏ border mặc định */
+  display: inline-block; /* Để nút nằm gọn trong vùng */
+  text-align: center; /* Căn giữa chữ */
+}
+.ho-item div span {
+  color: white;
+}
+
+.list-group-item + .list-group-item {
+  border-top-width: 1px;
+}
+
 .create-container {
   width: 95%;
   margin-top: 8%;
@@ -964,6 +1003,7 @@ p.subtitle span {
 .flashcard-item h5 {
   font-size: 18px;
   font-weight: bold;
+  width: 20%;
 }
 
 .progress-bar {
@@ -1062,10 +1102,68 @@ p.subtitle span {
   color: #000000;
 }
 
+.edit-container {
+  width: 95%;
+  margin-top: 8%;
+  margin-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3rem;
+}
+
+.edit-container .edit_div:nth-child(1) {
+  display: flex;
+  flex: 0.5 0.5;
+  justify-content: space-between;
+}
+.edit-container .edit_div:nth-child(1) h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.edit-container .edit_div:nth-child(2) {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+.edit-container .edit_div:nth-child(2) input {
+  background-color: #2e3856;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+}
+.edit-container .edit_div:nth-child(2) input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4255ff;
+}
+.edit-container .edit_div:nth-child(2) input::placeholder {
+  color: gray;
+}
+.edit-container .edit_div:nth-child(2) input:last-child {
+  margin-bottom: 0;
+}
+.edit-container .edit_div:nth-child(2) .edit_div-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.edit-container .edit_div:nth-child(2) .edit_div-item button {
+  border: 2px solid #2e3856;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: transparent;
+}
+
 .learn-container {
   margin-top: 8%;
   margin-left: 10%;
   padding-right: 10%;
+}
+.learn-container .btn {
+  color: #000000;
 }
 
 .learn-card {
@@ -1084,10 +1182,11 @@ p.subtitle span {
   margin-left: 10%;
   padding-right: 10%;
   margin-bottom: 3rem;
-  border: 0.2rem solid white;
-  background-color: #0a092d;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+.user-container button {
+  margin-left: 9%;
 }
 
 .user-img--user {
@@ -1100,6 +1199,69 @@ p.subtitle span {
   margin: 3.5rem 0.5rem;
   width: 50%;
   color: white;
+}
+
+.user-container form input {
+  border: 1px soild #000000;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 60%;
+  background-color: #586380;
+  color: white;
+}
+
+.folder-container {
+  width: 95%;
+  margin-top: 8%;
+  margin-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3rem;
+}
+
+.fol-item {
+  width: 95%;
+  height: 5rem;
+  margin: 1rem;
+  background-color: #2e3856;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px; /* Để đường viền tròn */
+  box-shadow: 8px rgba(0, 0, 0, 0.1); /* Để tạo hiệu ứng đổ bóng */
+}
+.fol-item h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  width: 70%;
+  align-items: center;
+  align-content: center;
+}
+.fol-item h2 a {
+  margin: 0 auto;
+  align-items: center;
+}
+.fol-item div {
+  border: 2px solid #586380;
+  background-color: #586380;
+  padding: 0.2rem 0.4rem;
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách xung quanh chữ */
+  font-size: 16px; /* Kích thước chữ */
+  border-radius: 30px; /* Để đường viền tròn */
+  border: none; /* Bỏ border mặc định */
+  display: inline-block; /* Để nút nằm gọn trong vùng */
+  text-align: center; /* Căn giữa chữ */
+}
+.fol-item div span {
+  color: white;
+}
+
+.folder-card div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 /* PHẦN FOOTER */

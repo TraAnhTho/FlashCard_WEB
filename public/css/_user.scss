@@ -4,10 +4,14 @@
     margin-left: 10%;
     padding-right: 10%;
     margin-bottom: 3rem;
-    border: 0.2rem solid $white-color;
-    background-color: $gray-100-twilight-900;
+    // border: 0.2rem solid $white-color;
+    // background-color: $gray-100-twilight-900;
     flex-direction: row;
     flex-wrap: nowrap;
+    button {
+        margin-left: 9%;
+        
+    }
 }
 .user-img--user {
     width: 15rem;
@@ -18,4 +22,16 @@
     margin: 3.5rem 0.5rem;
     width: 50%;
     color: $white-color;
+}
+.user-container {
+    form {
+        input {
+            border: 1px soild $black-color;
+            border-radius: 1rem;
+            height: 4rem;
+            width: 60%;
+            background-color: $twilight-100-gray-600;
+            color: $white-color;
+        }
+    }
 }

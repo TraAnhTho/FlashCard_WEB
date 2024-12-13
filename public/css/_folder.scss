@@ -1,0 +1,57 @@
+.folder-container {
+    width: 95%;
+    margin-top: 8%;
+    margin-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 3rem;
+}
+
+.fol-item {
+    width: 95%;
+    height: 5rem;
+    margin: 1rem;
+    background-color: $gray-100-gray-700;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px; /* Để đường viền tròn */
+    box-shadow:  8px rgba(0, 0, 0, 0.1); /* Để tạo hiệu ứng đổ bóng */
+
+    h2 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white-color;
+        width: 70%;
+        align-items: center;
+        align-content: center;
+        a {
+            margin: 0 auto;
+            align-items: center;
+        }
+    }
+    div {
+        border: 2px solid $twilight-100-gray-600;
+        background-color: $twilight-100-gray-600;
+        padding: 0.2rem 0.4rem;
+        color: white; /* Màu chữ */
+        padding: 10px 20px; /* Khoảng cách xung quanh chữ */
+        font-size: 16px; /* Kích thước chữ */
+        border-radius: 30px; /* Để đường viền tròn */
+        border: none; /* Bỏ border mặc định */
+        display: inline-block; /* Để nút nằm gọn trong vùng */
+        text-align: center; /* Căn giữa chữ */
+        span {
+            color: $white-color;
+        }
+    }
+}
+.folder-card {
+    div {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+    }
+}

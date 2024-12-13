@@ -50,7 +50,8 @@
 }
 .home-img-circle {
     border-radius: 50%;
-    width: 65%;
+    width: 4rem;
+    height: 4rem;
 }
 .home-nav-container {
     display: flex;
@@ -126,4 +127,42 @@
 }
 .menu-item a:hover {
     cursor: pointer;
+}
+// ------------------------------------------------------------------------------
+.ho-container {
+    margin-top: 8%;
+    margin-left: 10%;
+    padding-right: 10%;
+}
+.ho-item {
+    width: 25%;
+    height: 15rem;
+    margin: 3rem;
+    background-color: $gray-100-gray-700;
+
+    border-radius: 1rem;
+
+    h2 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    div {
+        border: 2px solid $twilight-100-gray-600;
+        background-color: $twilight-100-gray-600;
+        padding: 0.2rem 0.4rem;
+        color: white; /* Màu chữ */
+        padding: 10px 20px; /* Khoảng cách xung quanh chữ */
+        font-size: 16px; /* Kích thước chữ */
+        border-radius: 30px; /* Để đường viền tròn */
+        border: none; /* Bỏ border mặc định */
+        display: inline-block; /* Để nút nằm gọn trong vùng */
+        text-align: center; /* Căn giữa chữ */
+        span {
+            color: $white-color;
+        }
+    }
+}
+.list-group-item + .list-group-item {
+    border-top-width: 1px;
 }
